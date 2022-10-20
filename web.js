@@ -13,6 +13,8 @@ app.post('/', function (req, res) {
   const moves = ['F', 'T', 'L', 'R'];
   
   // TODO add your implementation here to replace the random response
+
+  console.log(app);
   
   res.send(moves[Math.floor(Math.random() * moves.length)]);
 });
