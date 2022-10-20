@@ -5,7 +5,7 @@ const bodyParser = require('body-parser');
 app.use(bodyParser.json());
 
 app.get('/', function (req, res) {
-  res.send('Let the battle begin!');
+  res.send(console.log(req));
 });
 
 app.post('/', function (req, res) {
@@ -13,8 +13,6 @@ app.post('/', function (req, res) {
   const moves = ['F', 'T', 'L', 'R'];
   
   // TODO add your implementation here to replace the random response
-
-  console.log(moves);
   
   res.send(moves[Math.floor(Math.random() * moves.length)]);
 });
